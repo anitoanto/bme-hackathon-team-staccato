@@ -5,13 +5,14 @@ class StaccatoDB:
         self.filepath = filepath
         self.connection = None
         self.cursor = None
-    
+
     def connect(self):
         """Connect to the SQLite database."""
         import sqlite3
+
         self.connection = sqlite3.connect(self.filepath)
         self.cursor = self.connection.cursor()
-    
+
     def close(self):
         """Close the SQLite database connection."""
         if self.connection:
@@ -20,14 +21,16 @@ class StaccatoDB:
             self.cursor = None
         else:
             print("Connection is already closed.")
-    
+
     def create_table(self, table_name: str, columns: dict):
         """Create a table in the SQLite database."""
-        columns_with_types = ", ".join([f"{col} {dtype}" for col, dtype in columns.items()])
+        columns_with_types = ", ".join(
+            [f"{col} {dtype}" for col, dtype in columns.items()]
+        )
         query = f"CREATE TABLE IF NOT EXISTS {table_name} ({columns_with_types})"
         self.cursor.execute(query)
         self.connection.commit()
-    
+
     def insert_data(self, table_name: str, data: dict):
         """Insert data into the SQLite database."""
         columns = ", ".join(data.keys())
@@ -35,11 +38,24 @@ class StaccatoDB:
         query = f"INSERT INTO {table_name} ({columns}) VALUES ({placeholders})"
         self.cursor.execute(query, tuple(data.values()))
         self.connection.commit()
-    
-    def fetch_data(self, table_name: str, conditions: str = None):
+
+    def fetch_data(self, table_name: str, conditions: str = None, cols: list = ["*"]):
         """Fetch data from the SQLite database."""
-        query = f"SELECT * FROM {table_name}"
+        cols_str = ", ".join(cols)
+        query = f"SELECT {cols_str} FROM {table_name}"
         if conditions:
             query += f" WHERE {conditions}"
         self.cursor.execute(query)
         return self.cursor.fetchall()
+
+    def drop_table(self, table_name: str):
+        """Drop a table from the SQLite database."""
+        query = f"DROP TABLE IF EXISTS {table_name}"
+        self.cursor.execute(query)
+        self.connection.commit()
+    
+    def run_query(self, query: str):
+        """Run a custom SQL query and return the results."""
+        self.cursor.execute(query)
+        return self.cursor.fetchall()
+    
