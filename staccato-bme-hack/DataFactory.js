@@ -1,128 +1,67 @@
-// This will be driven by the data from the API (data analysis results)
 // UK Artists
-export const ukArtists = [
+export const artistsGroup1 = [
     {
         id: 'uk1',
-        name: "Charli XCX",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["us6", "us10"] // Olivia Rodrigo, Taylor Swift
+        name: "The Beatles",
+        imageUrl: "https://cdn2.picryl.com/photo/1965/05/01/beatles-ad-1965-just-the-beatles-crop-db9a57-1024.jpg",
+        influencedBy: ["us1", "us3"] // Olivia Rodrigo, Taylor Swift
     },
     {
         id: 'uk2',
-        name: "Ed Sheeran",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["us1", "us10"] // George Strait, Taylor Swift
+        name: "The Rolling Stones",
+        imageUrl: "https://img.goodfon.com/original/2000x1391/4/20/rolling-stones-dzhagger-muzyka.jpg",
+        influencedBy: ["us2"] // George Strait, Taylor Swift
     },
     {
         id: 'uk3',
-        name: "The 1975",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["us7", "us9"] // Doja Cat, Billie Eilish
+        name: "Bee Gees",
+        imageUrl: "https://live.staticflickr.com/4515/38831685591_d7905c9dda_b.jpg",
+        influencedBy: ["us4", "us5"] // Doja Cat, Billie Eilish
     },
     {
         id: 'uk4',
-        name: "Arctic Monkeys",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
+        name: "The Who",
+        imageUrl: "https://i.discogs.com/cPeOC8iVBQRxRSqbogNxhEcH5oQ9G-pMkdL2UTKk4Jc/rs:fit/g:sm/q:90/h:410/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9BLTE5Njc2/Ni0xNTk1OTY4MTMx/LTIyMjEuanBlZw.jpeg",
         influencedBy: ["us2", "us3"] // Jelly Roll, Missy Elliott
     },
     {
         id: 'uk5',
-        name: "Oasis",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
+        name: "The Yardbirds",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2PkQym7fQ-Fbzthto4u7y5pifXI7JGbX1D-ic8bPppw3m_8NN_bNsLK9FX64Lj4l_jKvgdbUYhbbVJAXuLlXsog",
         influencedBy: ["us1", "us2"] // George Strait, Jelly Roll
-    },
-    {
-        id: 'uk6',
-        name: "Florence + The Machine",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["us5", "us9"] // Beyoncé, Billie Eilish
-    },
-    {
-        id: 'uk7',
-        name: "RAYE",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["us7", "us5"] // Doja Cat, Beyoncé
-    },
-    {
-        id: 'uk8',
-        name: "Stormzy",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["us3", "us7"] // Missy Elliott, Doja Cat
-    },
-    {
-        id: 'uk9',
-        name: "beabadoobee",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["us9", "us6"] // Billie Eilish, Olivia Rodrigo
-    },
-    {
-        id: 'uk10',
-        name: "Sam Fender",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["us1", "us10"] // George Strait, Taylor Swift
     }
 ];
 
 // US Artists
-export const usArtists = [
+export const artistsGroup2 = [
     {
         id: 'us1',
-        name: "George Strait",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["uk5"] // Oasis
+        name: "Sublime",
+        imageUrl: "https://miro.medium.com/v2/resize:fit:928/0*nX0fOTPl96FPwblZ.jpg",
+        influencedBy: ["uk1"] // Oasis
     },
     {
         id: 'us2',
-        name: "Jelly Roll",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["uk4", "uk5"] // Arctic Monkeys, Oasis
+        name: "Aerosmith",
+        imageUrl: "https://lh3.googleusercontent.com/Bmi2VZEik-ltQ2yHGmldiI0Cf4V0pX7YRQ8qCvJ0RMJr9ISjs4aeTB0YZ-e6y_FFhP19dl_HT5iWtkM=w544-h544-p-l90-rj",
+        influencedBy: ["uk2", "uk5", "uk2"] // Arctic Monkeys, Oasis
     },
     {
         id: 'us3',
-        name: "Missy Elliott",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["uk4"] // Arctic Monkeys
+        name: "The Byrds",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/The_Byrds_1965.png/250px-The_Byrds_1965.png",
+        influencedBy: ["uk4", "uk1"] // Arctic Monkeys
     },
     {
         id: 'us4',
-        name: "Teddy Swims",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["uk2", "uk6"] // Ed Sheeran, Florence
+        name: " Nirvana",
+        imageUrl: "https://cdn.britannica.com/27/23027-004-633EF982/Nirvana-Kurt-Cobain-Krist-Novoselic-Dave-Grohl.jpg",
+        influencedBy: ["uk3"] // Ed Sheeran, Florence
     },
     {
         id: 'us5',
-        name: "Beyoncé",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["uk6"] // Florence + The Machine
-    },
-    {
-        id: 'us6',
-        name: "Olivia Rodrigo",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["uk1", "uk9"] // Charli XCX, beabadoobee
-    },
-    {
-        id: 'us7',
-        name: "Doja Cat",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["uk1", "uk7"] // Charli XCX, RAYE
-    },
-    {
-        id: 'us8',
-        name: "Post Malone",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["uk2", "uk4"] // Ed Sheeran, Arctic Monkeys
-    },
-    {
-        id: 'us9',
-        name: "Billie Eilish",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["uk6", "uk9"] // Florence + The Machine, beabadoobee
-    },
-    {
-        id: 'us10',
-        name: "Taylor Swift",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Michael_Jackson_Cannes.jpg",
-        influencedBy: ["uk2", "uk6"] // Ed Sheeran, Florence
+        name: "Oasis",
+        imageUrl: "https://www.vam.ac.uk/mused/wp-content/uploads/sites/2/2024/08/PK3K65-jpg.webp",
+        influencedBy: ["uk3"] // Florence + The Machine
     }
 ];

@@ -10,7 +10,7 @@ import {
 } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
-import { ukArtists, usArtists } from './DataFactory';
+import { artistsGroup1, artistsGroup2 } from './DataFactory';
 const generateNodesAndEdges = () => {
   const nodes = [];
   const edges = [];
@@ -19,7 +19,7 @@ const generateNodesAndEdges = () => {
   let yOffsetUK = 0;
   let yOffsetUS = 0;
 
-  const allArtists = [...ukArtists, ...usArtists];
+  const allArtists = [...artistsGroup2, ...artistsGroup1];
 
   allArtists.forEach((artist) => {
     const isUK = artist.id.startsWith('uk');
@@ -47,7 +47,7 @@ const generateNodesAndEdges = () => {
         ),
       },
       position: {
-        x: isUK ? 100 : 500,
+        x: isUK ? 500 : 100,
         y: isUK ? yOffsetUK : yOffsetUS,
       },
     });
