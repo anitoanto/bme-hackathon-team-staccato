@@ -1,0 +1,41 @@
+@import url('./xy-theme.css');
+
+html,
+body {
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./istockphoto-1415358870-612x612.jpg");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: center;
+}
+
+
+h1 {
+  color: #1a1a1a;
+  font-size: 3em;
+  margin-bottom: 0;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+h2 {
+  color: #666;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+}
+
+.react-flow__edge-path {
+  /* color: red !important; */
+  /* border: 1px solid red !important; */
+  /* fill: red !important; */
+}
