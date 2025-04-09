@@ -1,0 +1,5 @@
+yt-dlp==2025.4.9
+spotipy==2.22.1
+lyricsgenius==3.0.1
+google-api-python-client==2.94.0
+pandas==2.0.2
