@@ -40,12 +40,13 @@ To set up the project:
 
 2. Install the required dependencies:
    ```bash
+   cd staccato-bme-hack
    npm install
    ```
 
 3. Run the project:
    ```bash
-   npm start
+   npm run dev
    ```
 
 4. For data analysis, ensure the necessary datasets are available and paths are correctly configured.
